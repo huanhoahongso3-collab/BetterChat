@@ -18,9 +18,9 @@ export const getChatCompletion = async (
   if (isAzureEndpoint(endpoint) && apiKey) {
     headers['api-key'] = apiKey;
 
-    const model = config.model === 'gpt-3.5-turbo' ? 'gpt-35-turbo' : config.model === 'gpt-3.5-turbo-16k' ? 'gpt-35-turbo-16k' : config.model;
+    const model = config.model === 'gpt-4' ? 'gpt-4' : config.model === 'gpt-4-32k' ? 'gpt-4-32k' : config.model;
 
-    const apiVersion = '2023-03-15-preview';
+    const apiVersion = '2023-08-03-preview';
 
     const path = `openai/deployments/${model}/chat/completions?api-version=${apiVersion}`;
 
@@ -63,9 +63,9 @@ export const getChatCompletionStream = async (
   if (isAzureEndpoint(endpoint) && apiKey) {
     headers['api-key'] = apiKey;
 
-    const model = config.model === 'gpt-3.5-turbo' ? 'gpt-35-turbo' : config.model === 'gpt-3.5-turbo-16k' ? 'gpt-35-turbo-16k' : config.model;
+    const model = config.model === 'gpt-4' ? 'gpt-4' : config.model === 'gpt-4-32k' ? 'gpt-4-32k' : config.model;
 
-    const apiVersion = '2023-03-15-preview';
+    const apiVersion = '2023-08-03-preview';
 
     const path = `openai/deployments/${model}/chat/completions?api-version=${apiVersion}`;
 
